@@ -2,6 +2,9 @@ html, body, p {
     margin: 0;
     padding: 0;
 }
+html, body {
+    height: 100%;
+}
 *{
     box-sizing: border-box;
     font-family: 'Verdana', sans-serif;
@@ -43,9 +46,6 @@ nav {
     flex-grow: 2;
     align-self: flex-start;
 }
-img {
-    flex-grow: 1;
-}
 header h1 {
     margin-left: 15px;
     font-weight: bold;
@@ -63,7 +63,8 @@ article {
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    align-self: flex-start;
 }
 h3 {
     height: 50px;
@@ -85,3 +86,23 @@ article p {
 .sign {
     font-weight: bold;
 }
+.burger {
+    display: none;
+}
+@media all and (max-width: 900px) {
+    main {
+            flex-wrap: wrap;
+             }
+    h1, nav {
+        display: none;
+    }
+    .logo {
+        justify-content: left;
+    }
+    .burger {
+        display: block;
+    }
+    header {
+        justify-content: space-between;
+    }
+    }
